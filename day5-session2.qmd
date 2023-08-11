@@ -1,0 +1,55 @@
+---
+title: "day5-session2"
+format: html
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+```
+
+## Some logical operators
+
+-   == (does this match?)
+
+-   != (do these NOT match?)
+
+-   \>, \<, \>=, \<=
+
+-   &, \|
+
+```{r}
+
+# Does 4 mathch 5? 
+4 == 5
+
+# Does 4 match 4? 
+4 == 4
+
+# Does 4 NOT MATCH 5? 
+4 != 5
+
+# Dose 4 match "4"?
+4 == "4"
+
+# with assigned variables:
+cat <- 10
+dog <- 7
+
+cat > dog
+
+# Is dog greater than cat, OR is cat less than 20?
+
+dog > cat | cat < 20
+
+# is dog less than cat AND cat == 10 ?
+dog  > 0.5 * cat 
+
+dog < cat & cat >2 & 4 >= dog
+```
+
+```{r}
+ggplot(data = mtcars, aes(x=wt, y=mpg)) +
+  geom_point(aes(size = mpg, color = wt)) +
+  labs(x="Car weight (1000 pound)", y= "mpg", title = "Car weight efficiency relationship")
+```
